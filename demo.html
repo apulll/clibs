@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo clibs</title>
+</head>
+<body>
+  <input type="text" class="autoc">
+<script src="./clibs.js" charset="utf-8"></script>
+<script>
+  var clibs = window.clibs;
+  var throttle = clibs.throttle;
+  var $autoc = document.querySelector('.autoc')
+
+  $autoc.onkeydown  = function() {
+    // console.log(454)
+    // if(this.inputValue) this.value = this.inputValue;
+    throttle(function(){
+      console.log($autoc.value)
+    },5000)
+  }
+
+</script>
+</body>
+</html>
